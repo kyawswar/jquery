@@ -7,6 +7,8 @@
 </head>
 <body>
     <input type="text" name="" id="name">
+
+    
     <input type="button" value="Show Data" id="btn">
 
     <h2></h2>
@@ -16,7 +18,7 @@
             $("#btn").on('click',function () { 
                 var nameData = $("#name").val();
                 //console.log(nameData);
-                $("h2").html(nameData);
+                $("h2").html("Your Type :"+nameData);
              });
         });
     </script>
