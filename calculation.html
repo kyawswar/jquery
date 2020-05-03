@@ -23,13 +23,13 @@
                 if(isNaN(numOne))
                 {
                     // alert('Fill data for num one.')
-                    $('#numOneErr').html('Fill data for num One.');
+                    $('#numOneErr').html('Fill data for num One.').css('color','red');
                 }
                 
                 if(isNaN(numTwo))
                 {
                     // alert('Fill data for num two.')
-                    $('#numTwoErr').html('Fill data for num One.');
+                    $('#numTwoErr').html('Fill data for num One.').css({'color':'red','padding':'10px','background':'lightgray'});
                 }
                 
                 var ans = numOne + numTwo;
