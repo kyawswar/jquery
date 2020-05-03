@@ -16,6 +16,13 @@
     <script>
         $(document).ready(function () {
            
+            $('#numone').keypress(function () { 
+                $('#numOneErr').html('');
+            });
+            $('#numtwo').keypress(function () { 
+                $('#numTwoErr').html('');
+            });
+
             $("#btnsum").click(function(){
                 var numOne = parseInt($("#numone").val());
                 var numTwo = parseInt($("#numtwo").val());
@@ -36,10 +43,7 @@
                 $("h2").html(ans);
             });
 
-            // $(selector).click(function (e) { 
-            //     e.preventDefault();
-                
-            // });
+           
         });
     </script>
 </body>
