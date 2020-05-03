@@ -10,18 +10,33 @@
     <input type="text" name="" id="numtwo">
 
     <input type="button" value="Sum" id="btnsum">
-    
+    <h2></h2>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
            
             $("#btnsum").click(function(){
-                var numOne = $("#numone").val();
-                var numTwo = $("#numtwo").val();
+                var numOne = parseInt($("#numone").val());
+                var numTwo = parseInt($("#numtwo").val());
+
+                if(isNaN(numOne))
+                {
+                    alert('Fill data for num one.')
+                }
+                
+                if(isNaN(numTwo))
+                {
+                    alert('Fill data for num two.')
+                }
                 
                 var ans = numOne + numTwo;
-                    alert(ans);
+                $("h2").html(ans);
             });
+
+            // $(selector).click(function (e) { 
+            //     e.preventDefault();
+                
+            // });
         });
     </script>
 </body>
