@@ -6,23 +6,31 @@
     <title>Document</title>
 </head>
 <body>
-    <table border="1" width="200px;">
-        
+    <input type="text" name="" id="search">
+    <table>
+
     </table>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js'></script>
     <script>
         $(document).ready(function () {
             $.ajax({
-                url: "https://my-json-server.typicode.com/typicode/demo/posts",
+                url: "https://restcountries.eu/rest/v2/all",
                 success: function (response) {
                     // console.log(response);
                     $.each(response, function (index, value) { 
                         //  console.log(value.id);
-                        $('table').append('<tr><td>'+value.id+'</td><td>'+value.title+'</td></tr>');
+                        $('table').append('<tr><td>'+value.name+'</td></tr>');
                     });
                 }
             });
+
+            $("#search").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("table tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
         });
-    </script>   
+        });
+    </script>
 </body>
 </html>
