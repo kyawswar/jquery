@@ -7,8 +7,9 @@
 </head>
 <body>
     <input type="text" name="" id="numone">
+    <div id="numOneErr"></div>
     <input type="text" name="" id="numtwo">
-
+    <div id="numTwoErr"></div>
     <input type="button" value="Sum" id="btnsum">
     <h2></h2>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
@@ -21,12 +22,14 @@
 
                 if(isNaN(numOne))
                 {
-                    alert('Fill data for num one.')
+                    // alert('Fill data for num one.')
+                    $('#numOneErr').html('Fill data for num One.');
                 }
                 
                 if(isNaN(numTwo))
                 {
-                    alert('Fill data for num two.')
+                    // alert('Fill data for num two.')
+                    $('#numTwoErr').html('Fill data for num One.');
                 }
                 
                 var ans = numOne + numTwo;
